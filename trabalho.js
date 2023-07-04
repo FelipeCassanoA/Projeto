@@ -172,7 +172,6 @@ class Sistema
       });
     }
        
-
  
     verListaConsultas() { //6
       
@@ -234,8 +233,7 @@ class Sistema
     }
     
 
-
-    removerCliente() {
+    removerCliente() { //10
       const nomeCliente = prompt('Digite o nome do cliente que deseja remover: ');
     
       const indiceCliente = this.clientes.findIndex(cliente => cliente.nome_Cliente === nomeCliente);
@@ -250,24 +248,8 @@ class Sistema
       console.log('Cliente removido com sucesso.');
     }
     
-
-    removerFuncionarioPorNome() {
-      const nomeFuncionario = prompt('Digite o nome do funcionário a ser removido:');
-    
-      const index = this.funcionario.findIndex(funcionario => funcionario.nome === nomeFuncionario);
-    
-      if (index === -1) {
-        console.log('Funcionário não encontrado.');
-        return;
-      }
-    
-      this.funcionario.splice(index, 1);
-      console.log('Funcionário removido com sucesso!');  
   
-    }
-
-
-    removerPet() {
+    removerPet() { //11
       const nomeCliente = prompt('Digite o nome do cliente: ');
       const nomePet = prompt('Digite o nome do pet: ');
     
@@ -291,6 +273,22 @@ class Sistema
       } else {
         console.log(`Não foi encontrado um cliente com o nome '${nomeCliente}'.`);
       }
+    }
+
+
+    removerFuncionarioPorNome() { //13
+      const nomeFuncionario = prompt('Digite o nome do funcionário a ser removido:');
+    
+      const index = this.funcionario.findIndex(funcionario => funcionario.nome === nomeFuncionario);
+    
+      if (index === -1) {
+        console.log('Funcionário não encontrado.');
+        return;
+      }
+    
+      this.funcionario.splice(index, 1);
+      console.log('Funcionário removido com sucesso!');  
+  
     }
 
 
